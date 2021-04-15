@@ -1,0 +1,109 @@
+###请求体
+{
+    "requestHeader": {
+        "version": "1.0"
+    },
+    "page": {"offset": 0, "limit": 10}
+}
+
+### 获取类型返回
+{
+    "result": {
+        "resultCode": "20000101",
+        "resultMessage": "获取所有文档类型信息成功"
+        # "resultCode": "20000199",
+        # "resultMessage": "获取文档信息失败"
+    },
+    "content": [{
+        "name": "运维文档",
+        "userName": "admin",
+        "createTime": "",
+        "remark": "运维的文档"
+    }],
+    # 失败返回为 []
+
+    "page": {
+        "total": 100,  # 总数
+        "limit": 6,  # 每页容量
+        "offset": 1  # 当前页码
+    }
+}
+
+### 创建类型
+{
+    "requestHeader": {
+        "version": "1.0"
+    },
+    "typeInfo": {
+        "typeName": "",  # 类型名称
+        "user": "admin",  # 创建人
+        "explain": "",  # 简介
+        "createTime": "",  # 创建时间
+        "updateTime": ""  # 更新时间
+    }
+}
+
+### 文档类型创建返回
+{
+    "result": {
+        "resultCode": "20000102",
+        "resultMessage": "创建文档类型成功"
+        # "resultCode": "20000198",
+        # "resultMessage": "获取文档信息失败"
+    }
+}
+
+### 修改文档类型
+{
+    "requestHeader": {
+        "version": "1.0"
+    },
+    "typeInfo": {
+        "typeName": "",  # 类型名称
+        "user": "admin",  # 创建人
+        "explain": "",  # 简介
+        "createTime": "",  # 创建时间
+        "updateTime": ""  # 创建时间
+    }
+}
+
+### 文档类型修改返回
+{
+    "result": {
+        "resultCode": "20000103",
+        "resultMessage": "修改文档类型成功"
+        # "resultCode": "20000197",
+        # "resultMessage": "修改文档信息失败,文档不存在"
+    }
+}
+
+### 登录
+{
+    "requestHeader": {
+        "version": "1.0"
+    },
+    "userInfo": {
+        "user": "admin",
+        "password": ""
+    }
+}
+
+{
+    "result": {
+        "resultCode": "20000201",
+        "resultMessage": "登录成功"
+        # "resultCode": "20000299",
+        # "resultMessage": "登录失败"
+    },
+    "userInfo": {
+        "username": "",
+        "token": ""
+    }
+}
+
+{
+    "result": {
+        "resultCode": "20000200",
+        "resultMessage": "用户注册成功"
+    }
+}
